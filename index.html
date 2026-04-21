@@ -1,0 +1,808 @@
+Hero
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AyoolaTheDev | Fullstack web developer</title>
+<meta name="description" content="I'm AyoolaTheDev - a Full-stack web developer passionate about building modern, responsive, and blockchain
+        integrated web applications. Explore my projects and experience">
+<meta name="keywords" content="AyoolaTheDev, Fullstack web developer, Frontend web developer, Web3 Developer, React, Javascript, HTML, developer portfolio,CSS">
+<meta name="author" content="AyoolaTheDev">
+<meta name="robots" content="index, follow">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ce9bff",
+                    "error-container": "#a70138",
+                    "primary-dim": "#6063ee",
+                    "tertiary-fixed-dim": "#c488ff",
+                    "on-tertiary-container": "#000000",
+                    "surface-container-highest": "#23262c",
+                    "error": "#ff6e84",
+                    "surface-tint": "#a3a6ff",
+                    "primary": "#a3a6ff",
+                    "surface-container-high": "#1d2025",
+                    "surface-container-low": "#111318",
+                    "on-surface": "#f6f6fc",
+                    "secondary-fixed": "#65e1ff",
+                    "tertiary-container": "#af5cfe",
+                    "surface-container-lowest": "#000000",
+                    "background": "#0c0e12",
+                    "primary-fixed": "#9396ff",
+                    "surface": "#0c0e12",
+                    "secondary-fixed-dim": "#48d4f3",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-container": "#0a0081",
+                    "primary-fixed-dim": "#8387ff",
+                    "on-tertiary-fixed": "#270048",
+                    "primary-container": "#9396ff",
+                    "tertiary-fixed": "#ce9bff",
+                    "error-container": "#a70138",
+                    "primary-dim": "#6063ee",
+                    "tertiary-fixed-dim": "#c488ff",
+                    "on-tertiary-container": "#000000",
+                    "surface-container-highest": "#23262c",
+                    "error": "#ff6e84",
+                    "surface-tint": "#a3a6ff",
+                    "primary": "#a3a6ff",
+                    "surface-container-high": "#1d2025",
+                    "surface-container-low": "#111318",
+                    "on-surface": "#f6f6fc",
+                    "secondary-fixed": "#65e1ff",
+                    "tertiary-container": "#af5cfe",
+                    "surface-container-lowest": "#000000",
+                    "background": "#0c0e12",
+                    "primary-fixed": "#9396ff",
+                    "surface": "#0c0e12",
+                    "secondary-fixed-dim": "#48d4f3",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-container": "#0a0081",
+                    "primary-fixed-dim": "#8387ff",
+                    "on-tertiary-fixed": "#270048",
+                    "primary-container": "#9396ff",
+                    "on-tertiary-fixed-variant": "#560094",
+                    "on-background": "#f6f6fc",
+                    "tertiary": "#c180ff",
+                    "on-error": "#490013",
+                    "secondary": "#53ddfc",
+                    "surface-container": "#171a1f",
+                    "surface-dim": "#0c0e12",
+                    "on-primary-fixed-variant": "#0e009d",
+                    "on-secondary-fixed-variant": "#005969",
+                    "outline": "#74757a",
+                    "on-surface-variant": "#aaabb0",
+                    "outline-variant": "#46484d",
+                    "inverse-on-surface": "#53555a",
+                    "inverse-primary": "#494bd7",
+                    "on-primary": "#0f00a4",
+                    "on-tertiary": "#33005b",
+                    "surface-bright": "#292c32",
+                    "surface-variant": "#23262c",
+                    "on-error-container": "#ffb2b9",
+                    "on-secondary-container": "#ecfaff",
+                    "on-secondary": "#004b58",
+                    "on-secondary-fixed": "#003a45",
+                    "tertiary-dim": "#9c48ea",
+                    "inverse-surface": "#f9f9ff",
+                    "error-dim": "#d73357",
+                    "secondary-dim": "#40ceed",
+                    "secondary-container": "#00687a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+     body {
+            background-color: #0c0e12;
+            color: #f6f6fc;
+            font-family: 'Inter', sans-serif;
+             -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+           .glass-card {
+            background: rgba(23, 26, 31, 0.7);
+            backdrop-filter: blur(12px) saturate(150%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .mesh-gradient {
+            background-color: #0c0e12;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(163, 166, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(193, 128, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(83, 221, 252, 0.1) 0px, transparent 50%);
+        }
+        .kinetic-text {
+            -webkit-text-stroke: 1px rgba(246, 246, 252, 0.1);
+            color: transparent;
+            background: linear-gradient(180deg, #f6f6fc 0%, rgba(246, 246, 252, 0.2) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        .glass-card {
+            background: rgba(23, 26, 31, 0.7);
+            backdrop-filter: blur(12px) saturate(150%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+         .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(23, 26, 31, 0.7);
+            backdrop-filter: blur(12px) saturate(150%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .kinetic-title {
+            letter-spacing: -0.04em;
+        }
+        .glow-hover:hover {
+            box-shadow: 0px 0px 40px rgba(163, 166, 255, 0.15);
+        }
+               .text-glow {
+            text-shadow: 0 0 20px rgba(163, 166, 255, 0.3);
+        }
+        .indigo-gradient {
+            background: linear-gradient(135deg, #a3a6ff 0%, #9396ff 100%);
+        }
+               .glass-panel {
+            background: rgba(23, 26, 31, 0.7);
+            backdrop-filter: blur(12px) saturate(150%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-indigo {
+            box-shadow: 0 0 20px rgba(163, 166, 255, 0.2);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(163, 166, 255, 0.4);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0e12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #46484d;
+            border-radius: 10px;
+        }
+
+        /* ===== WOW ANIMATIONS ===== */
+        
+        /* Text Reveal Animation */
+        @keyframes textReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal-text {
+            animation: textReveal 1.8s ease-out forwards;
+        }
+
+        .reveal-text:nth-child(1) { animation-delay: 0.1s; }
+        .reveal-text:nth-child(2) { animation-delay: 0.3s; }
+        .reveal-text:nth-child(3) { animation-delay: 0.5s; }
+
+        /* Fade In Scroll Animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Floating/Levitation Animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .float-animation:nth-child(1) { animation-delay: 0s; }
+        .float-animation:nth-child(2) { animation-delay: 0.5s; }
+        .float-animation:nth-child(3) { animation-delay: 1s; }
+        .float-animation:nth-child(4) { animation-delay: 1.5s; }
+
+        /* Cursor Glow Particle */
+        .cursor-glow {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgba(163, 166, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            box-shadow: inset 0 0 10px rgba(163, 166, 255, 0.4), 0 0 20px rgba(163, 166, 255, 0.3);
+            transition: width 0.1s, height 0.1s;
+            display: none;
+        }
+
+        @media (hover: hover) {
+            .cursor-glow {
+                display: block;
+            }
+        }
+
+        /* Scale Up Animation for Interactive Elements */
+        @keyframes scaleIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .scale-in {
+            animation: scaleIn 0.6s ease-out;
+        }
+
+        /* Shine Effect for Buttons */
+        @keyframes shine {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .btn-shine {
+            background-size: 1000px 100%;
+            background-position: 0 0;
+            transition: background-position 0.5s ease;
+        }
+
+        .btn-shine:hover {
+            animation: shine 0.6s ease-in-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl shadow-[0px_24px_80px_rgba(0,0,0,0.5)]">
+<nav class="flex justify-between items-center px-6 h-20 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-indigo-400 text-2xl">blur_on</span>
+<span class="text-xl font-bold tracking-widest text-slate-50 font-headline uppercase">AyoolaTheDev</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-indigo-400 font-bold font-headline tracking-tighter uppercase hover:text-primary transition-colors" href="#projects">PROJECTS</a>
+<a class="text-slate-400 hover:text-slate-50 transition-colors font-headline tracking-tighter uppercase" href="#skills">SKILLS</a>
+<a class="text-slate-400 hover:text-slate-50 transition-colors font-headline tracking-tighter uppercase" href="#experience">EXPERIENCE</a>
+<a class="text-slate-400 hover:text-slate-50 transition-colors font-headline tracking-tighter uppercase" href="#contact">CONTACT</a>
+</div>
+<div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-slate-400 text-xs font-mono">
+                ⌘ K
+            </div>
+</nav>
+</header>
+<main class="relative min-h-screen flex flex-col overflow-hidden mesh-gradient">
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="absolute top-1/4 left-1/4 w-1 h-1 bg-primary rounded-full blur-[1px]"></div>
+<div class="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-secondary rounded-full blur-[1px]"></div>
+<div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-tertiary rounded-full blur-[1px]"></div>
+<div class="absolute top-3/4 right-1/4 w-1 h-1 bg-primary-dim rounded-full blur-[1px]"></div>
+</div>
+
+<section id="hero" class="relative flex-grow flex flex-col items-center justify-center pt-32 px-6 text-center">
+<div class="mb-6 flex flex-col items-center gap-2">
+<span class="label-md text-primary tracking-[0.3em] font-medium uppercase text-[10px]">Fullstack Developer · React · Node.js</span>
+<div class="h-[1px] w-12 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+</div>
+<div class="relative z-10 select-none">
+<h1 class="font-headline font-black text-4xl sm:text-5xl md:text-6xl tracking-tight leading-[1.2] max-w-3xl">
+<span class="block kinetic-text mb-3">I build full-stack</span>
+<span class="block text-on-surface mb-3">web applications from concept to production</span>
+<span class="block kinetic-text">using modern technologies & cloud infrastructure</span>
+</h1>
+
+
+
+</div>
+<div class="relative w-full max-w-sm mt-12 mb-16">
+<div class="glass-card p-4 rounded-xl absolute -top-8 -left-4 z-20 shadow-2xl rotate-[-4deg] border-l-2 border-primary/30">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">folder_open</span>
+</div>
+<div class="text-left">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label">Portfolio</p>
+<p class="text-xs font-bold text-on-surface">10+ Projects</p>
+</div>
+</div>
+</div>
+<div class="glass-card px-4 py-2 rounded-full absolute -bottom-10 -right-2 z-20 shadow-xl rotate-[2deg] flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[10px] font-mono text-secondary tracking-tighter">OPEN_TO_OPPORTUNITIES</span>
+</div>
+<div class="aspect-square w-full bg-surface-container rounded-full overflow-hidden relative border border-white/5 shadow-[0px_0px_100px_rgba(163,166,255,0.1)]">
+<img class="w-full h-full object-cover mix-blend-screen opacity-80" data-alt="Abstract 3D rendered obsidian spheres floating in a liquid indigo void with neon cyan light highlights and deep depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwHmOxZK3lWsMxUXGFLLQuWJ7gPKVyrPXF8xzSsam12wPFeidN_O1cpt7Q4ngRthcdaf5KmfRImgRUuZ0wwaoI6LU8mljeWJOTr0qk4oifu9DYtfU7wBM4dAbFBRxGS5ajtEjLj0uUdC5M7bjt7ISTbfpSjrLntG64IgeOrnZU2kB0mSORiK7YrQn1b-pmSfZFl6F5cwory8OBXCS7R_CPtZL9Sr42AcVW-FgfuCm97rtDosf3SBn28uVnM28nw4335gnJgglmdf_A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 items-center">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-tertiary rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+<a href="#projects" class="relative flex items-center gap-3 px-10 py-5 bg-primary text-on-primary font-headline font-bold rounded-full text-lg tracking-tight hover:scale-105 transition-all active:scale-95 shadow-[0px_0px_40px_rgba(163,166,255,0.4)] cursor-pointer">
+                    VIEW PROJECTS
+                    <span class="material-symbols-outlined font-bold">arrow_forward</span>
+</a>
+</div>
+<a href="https://github.com/Ayoola05617" target="_blank" class="flex items-center gap-3 px-8 py-5 bg-surface-container border border-white/20 hover:border-primary/50 text-on-surface hover:text-primary font-headline font-bold rounded-full text-lg tracking-tight hover:scale-105 transition-all active:scale-95 cursor-pointer">
+                    GITHUB
+                    <span class="material-symbols-outlined font-bold">code</span>
+</a>
+</div>
+<div class="mt-24 mb-8 flex flex-col items-center gap-4 opacity-40">
+<p class="text-[10px] tracking-[0.4em] uppercase font-label">Descend</p>
+<div class="w-[1px] h-12 bg-gradient-to-b from-on-surface to-transparent"></div>
+</div>
+</section>
+<section class="px-6 mb-32 mt-12">
+<div class="max-w-5xl mx-auto">
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-lowest border border-white/5 group">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
+<div class="flex flex-col justify-between">
+<div>
+<div class="inline-block mb-4">
+<span class="text-primary font-label text-[10px] tracking-[0.3em] uppercase px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">Featured Work</span>
+</div>
+<h2 class="font-headline text-3xl md:text-4xl font-black mb-4 leading-tight tracking-tighter">
+Build faster with <span class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">clean, scalable</span> code
+</h2>
+<p class="text-on-surface-variant text-base leading-relaxed mb-8 max-w-lg">
+I specialize in crafting full-stack solutions that combine beautiful UX with robust backend architecture. Every project is optimized for performance, maintainability, and user experience.
+</p>
+</div>
+
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-black/30 rounded-xl p-4 border border-white/5 backdrop-blur-sm">
+<p class="text-primary font-headline text-2xl font-bold">10+</p>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Projects</p>
+</div>
+<div class="bg-black/30 rounded-xl p-4 border border-white/5 backdrop-blur-sm">
+<p class="text-secondary font-headline text-2xl font-bold">500+</p>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Users Reached</p>
+</div>
+<div class="bg-black/30 rounded-xl p-4 border border-white/5 backdrop-blur-sm">
+<p class="text-tertiary font-headline text-2xl font-bold">2+</p>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Years Exp</p>
+</div>
+</div>
+</div>
+
+<div class="relative h-64 md:h-full rounded-2xl overflow-hidden border border-white/10 bg-surface-container-low group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent group-hover:from-primary/30 transition-all duration-500"></div>
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+     data-alt="Portfolio showcase"
+     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwHmOxZK3lWsMxUXGFLLQuWJ7gPKVyrPXF8xzSsam12wPFeidN_O1cpt7Q4ngRthcdaf5KmfRImgRUuZ0wwaoI6LU8mljeWJOTr0qk4oifu9DYtfU7wBM4dAbFBRxGS5ajtEjLj0uUdC5M7bjt7ISTbfpSjrLntG64IgeOrnZU2kB0mSORiK7YrQn1b-pmSfZFl6F5cwory8OBXCS7R_CPtZL9Sr42AcVW-FgfuCm97rtDosf3SBn28uVnM28nw4335gnJgglmdf_A"
+     alt="Portfolio work"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+
+<div class="relative z-10 px-8 md:px-12 py-6 border-t border-white/5 flex items-center justify-between">
+<p class="text-on-surface-variant text-sm">Ready to see more of my work?</p>
+<a href="#projects" class="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dim text-on-primary font-headline font-bold rounded-full text-sm tracking-widest uppercase transition-all hover:scale-105 active:scale-95">
+Explore All Projects
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="projects" class="mb-22 py-16 text-center">
+<span class="text-secondary font-label text-xs tracking-[0.3em] uppercase mb-6 block inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30">Selected Works</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black kinetic-title bg-gradient-to-r from-on-surface via-primary to-on-surface bg-clip-text text-transparent leading-none mb-6 tracking-tighter">
+                Digital <br/>Artifacts.
+            </h1>
+<p class="text-on-surface-variant max-w-2xl text-base md:text-lg leading-relaxed font-body mx-auto md:px-8 mb-12">
+                A curation of high-fidelity engineering and cinematic interface design. Each project is a study in precision and depth.
+            </p>
+<div class="flex flex-col gap-25">
+<article class="group relative">
+<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
+<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="img" src="Screenshot 2026-04-06 122825.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+</div>
+<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
+<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">HTML</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TAILWIND CSS</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">JAVASCRIPT</span>
+</div>
+<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">OwlAssist's Waitlist</h2>
+<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">An intelligent AI-powered assistant application that provides real-time guidance and analysis. Built with a focus on responsive design and seamless user interactions.</p>
+
+<div class="flex items-center gap-2 md:gap-4">
+<a href="www.owlassist.cloud" target="_blank" class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
+<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
+</div>
+
+</div>
+
+</div>
+</article>
+<article class="group relative">
+<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
+<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="img" src="Screenshot 2026-04-17 084709.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+</div>
+<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
+<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">REACT</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TAILWIND CSS</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TYPESCRIPT</span>
+</div>
+<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">DISN's Waitlist</h2>
+<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">Digital innovation school nigeria's waitlist to collect early users infomation so as to send them invite at full launch</p>
+<div class="flex items-center gap-2 md:gap-4">
+<a href="https://disn-waitlist.vercel.app" target="_blank" class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
+<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+</div>
+</article>
+<article class="group relative">
+<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
+<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="img" src="Screenshot 2025-11-19 104929.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+</div>
+<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
+<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">HTML</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">CSS</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">JAVASCRIPT</span>
+</div>
+<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">DecentraShop</h2>
+<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">A decentralized e-commerce platform leveraging blockchain technology for secure transactions. Features dynamic product discovery, smart contracts for trustless commerce, and intuitive wallet integration.</p>
+<div class="flex items-center gap-2 md:gap-4">
+<a class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
+<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+</div>
+</article>
+<article class="group relative">
+<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
+<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Retro-futuristic hardware interface with glowing mechanical buttons and a grid-based holographic display" src="screenshot-1759870420736.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+</div>
+<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
+<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">HTML</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TAILWIND CSS</span>
+<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">JAVASCRIPT</span>
+
+</div>
+<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">CALMSPACE</h2>
+<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">Calmspace is a serene and responsive web app i built to promote mindfulness and relaxation. It features guided meditation sessions & 24/7 chat support.</p>
+<div class="flex items-center gap-2 md:gap-4">
+<a href="https://calm-space-mu.vercel.app/" class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
+<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section id="about" class="space-y-8">
+<div class="relative w-32 h-32 mx-auto">
+<div class="absolute inset-0 rounded-full indigo-gradient blur-2xl opacity-20 animate-pulse"></div>
+<div class="relative w-full h-full rounded-full border-2 border-indigo-400/30 p-1">
+<img alt="Architect Identity" class="w-full h-full object-cover rounded-full" data-alt="Cinematic portrait of a male digital architect in low key dramatic lighting with blue neon accents reflecting on face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRgCtb5BEeSY6oNsgH2U535PxbLYk1XW2LMx891ZLT1rUgEEbJCvf9E1ILatAGW0BR2ff73p-62ifGnswftJHw5SDP8af7pZcQIP4TjzylFx12Qukjrawvw03VMoGom_xfq7gjaB44n4wR1QhABHIIzZdqsT5W5FMpNG_CM5q9bBqIuEvrHBFdZtU8L6VEgOWGXtgPf50qMVlMA0kkiYQIk2b3_-tgfOmDa6b4dY4vFtj7pcMJeS32ecw3dQyy8aH4RZJ85898HoZ"/>
+</div>
+</div>
+<div class="text-center space-y-4">
+<h1 class="text-4xl font-headline font-bold tracking-tighter leading-none text-glow">
+                    CRAFTING THE <br/> <span class="text-indigo-400">VOID.</span>
+</h1>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-[280px] mx-auto font-light">
+                    Interdisciplinary developer focused on building ultra-precise digital experiences.
+                </p>
+</div>
+</section>
+<section id="skills" class="space-y-12 py-16">
+<div class="flex flex-col items-center">
+<span class="text-[10px] tracking-[0.4em] text-secondary font-black uppercase mb-4 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 inline-block">Tech Stack</span>
+<div class="h-px w-16 bg-gradient-to-r from-transparent via-secondary to-transparent mt-4"></div>
+</div>
+<div class="relative grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-primary/40 hover:border-primary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="polymer">polymer</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">HTML</h3>
+<p class="text-[10px] text-on-surface-variant font-label">Fluid Markup</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="palette">palette</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">CSS & Tailwind</h3>
+<p class="text-[10px] text-on-surface-variant font-label">Styling Architecture</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-tertiary/40 hover:border-tertiary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-tertiary" data-icon="code">code</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">Javascript</h3>
+<p class="text-[10px] text-on-surface-variant font-label">Interactive Logic</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="component_exchange">component_exchange</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">React</h3>
+<p class="text-[10px] text-on-surface-variant font-label">UI Components</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-tertiary/40 hover:border-tertiary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-tertiary" data-icon="description">description</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">PHP</h3>
+<p class="text-[10px] text-on-surface-variant font-label">Backend Logic</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-primary/40 hover:border-primary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud_sync">cloud_sync</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">Node.js</h3>
+<p class="text-[10px] text-on-surface-variant font-label">Runtime Engine</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="settings_ethernet">settings_ethernet</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">Express</h3>
+<p class="text-[10px] text-on-surface-variant font-label">API Framework</p>
+</div>
+<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-tertiary/40 hover:border-tertiary/80 transition-all hover:scale-105">
+<span class="material-symbols-outlined text-4xl text-tertiary" data-icon="database">database</span>
+<h3 class="font-headline text-xs font-bold tracking-widest uppercase">MongoDB</h3>
+<p class="text-[10px] text-on-surface-variant font-label">Data Persistence</p>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-indigo-500/10 blur-xl"></div>
+</div>
+</section>
+<section id="experience" class="space-y-12">
+<div class="flex flex-col items-start px-2">
+<span class="text-[10px] tracking-[0.4em] text-indigo-400 font-black uppercase mb-2">Experience Log</span>
+<h2 class="text-2xl font-headline font-bold">THE JOURNEY</h2>
+</div>
+<div class="relative px-2 space-y-16">
+<div class="absolute left-[13px] top-2 bottom-0 w-[1px] bg-gradient-to-b from-indigo-400 via-secondary/40 to-transparent"></div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-background border border-indigo-400 flex items-center justify-center shadow-[0_0_15px_rgba(163,166,255,0.4)] z-10">
+<div class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></div>
+</div>
+<div class="space-y-2">
+<span class="text-[10px] font-label text-indigo-400 tracking-tighter">2026 — PRESENT</span>
+<h4 class="font-headline text-lg font-bold leading-tight">Intern Frontend Developer</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed font-light">Frontend web developer at KWARATECH ACADEMY.</p>
+</div>
+</div>
+<div class="relative pl-12 opacity-80">
+<div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-background border border-outline-variant flex items-center justify-center z-10">
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
+</div>
+<div class="space-y-2">
+<span class="text-[10px] font-label text-outline-variant tracking-tighter">2025 — 2026</span>
+<h4 class="font-headline text-lg font-bold leading-tight">Personal Projects & Skill Development</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed font-light">Practiced UI/UX design and deployment workflows, actively learning frontend & backend development</p>
+</div>
+</div>
+<div class="relative pl-12 opacity-60">
+<div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-background border border-outline-variant flex items-center justify-center z-10">
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
+</div>
+<div class="space-y-2 mb-4">
+<span class="text-[10px] font-label text-outline-variant tracking-tighter">2024 — 2025</span>
+<h4 class="font-headline text-lg font-bold leading-tight">Web Development Learning Phase</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed font-light">Completed online courses in HTML,CSS,JAVASCRIPT</p>
+
+<p class="text-xs text-on-surface-variant leading-relaxed font-light">Built mini projects (portfolio site, landing pages)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="glass-card p-8 rounded-3xl text-center space-y-6">
+<h3 class="text-xl font-headline font-bold">GOT AN IDEA, PROJECT, OR BUSINESS THAT NEEDS A <br/> <span class="text-indigo-400">WEBSITE?</span></h3>
+<p class="text-xs text-on-surface-variant font-light leading-relaxed">I can help you turn it into something real. <strong>Reach out let's build something great</strong></p>
+<button class="w-full py-4 indigo-gradient rounded-full text-[10px] font-bold tracking-[0.3em] uppercase shadow-[0_10px_30px_rgba(163,166,255,0.3)] hover:scale-95 transition-transform duration-300">
+                INITIATE CONTACT
+            </button>
+</section>
+<div class="mt-22 mb-10">
+<div class="flex items-center gap-4 mb-10">
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<span class="font-label text-[10px] tracking-[0.2em] text-outline uppercase">Network Links</span>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<a class="flex flex-col items-center gap-2 group" href="mailto:bamideleayoola09@gmail.com">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-primary group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
+<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">mail</span>
+</div>
+<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-primary transition-colors">MAIL</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-secondary group-hover:border-secondary/50 group-hover:bg-secondary/5 transition-all duration-300">
+<span class="material-symbols-outlined">podcasts</span>
+</div>
+<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-secondary transition-colors">LINKEDIN</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="https://github.com/Ayoola05617">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-tertiary group-hover:border-tertiary/50 group-hover:bg-tertiary/5 transition-all duration-300">
+<svg class="w-6 h-6 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.768.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+</svg>
+</div>
+<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-tertiary transition-colors">GITHUB</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="https://twitter.com/Ayoolathedev">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-error group-hover:border-error/50 group-hover:bg-error/5 transition-all duration-300">
+<svg class="w-6 h-6 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.89 6.75h-3.31l7.73-8.835L.456 2.25h6.598l4.682 6.18 5.373-6.18zM17.15 18.75h1.828L5.293 4.12H3.31L17.15 18.75z"/>
+</svg>
+</div>
+<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-error transition-colors">X</span>
+</a>
+</div>
+</div>
+</main>
+
+<footer class="w-full py-16 px-8 border-t border-white/5 bg-black">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 w-full max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-lg font-black text-slate-50 font-headline tracking-[0.2em] uppercase">AYOOLATHEDEV</span>
+<p class="text-slate-500 font-inter text-[10px] tracking-[0.2em] uppercase text-center md:text-left">© 2026 Ayoolathedev. DEVELOPED FOR PRECISION.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#projects">PROJECTS</a>
+<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#skills">SKILLS</a>
+<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#experience">EXPERIENCE</a>
+<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+<div class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-slate-950/80 backdrop-blur-2xl flex items-center justify-around px-6 border-t border-white/5 z-50">
+<a href="#projects" class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+<span class="text-[8px] tracking-widest">WORK</span>
+</a>
+<a href="#skills" class="flex flex-col items-center gap-1 text-slate-500 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">code</span>
+<span class="text-[8px] tracking-widest">SKILLS</span>
+</a>
+<a href="#experience" class="flex flex-col items-center gap-1 text-slate-500 hover:text-tertiary transition-colors">
+<span class="material-symbols-outlined text-lg">timeline</span>
+<span class="text-[8px] tracking-widest">EXP</span>
+</a>
+<a href="#contact" class="flex flex-col items-center gap-1 text-slate-500 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">mail</span>
+<span class="text-[8px] tracking-widest">CONTACT</span>
+</a>
+</div>
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute bottom-[20%] right-[-5%] w-[30%] h-[30%] rounded-full bg-secondary/5 blur-[100px]"></div>
+
+<div class="fixed -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed -top-24 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
+</div>
+
+<script>
+    // Cursor Glow Effect
+    const cursorGlow = document.createElement('div');
+    cursorGlow.className = 'cursor-glow';
+    document.body.appendChild(cursorGlow);
+
+    document.addEventListener('mousemove', (e) => {
+        cursorGlow.style.left = (e.clientX - 15) + 'px';
+        cursorGlow.style.top = (e.clientY - 15) + 'px';
+    });
+
+    // Hide cursor glow when mouse leaves window
+    document.addEventListener('mouseleave', () => {
+        cursorGlow.style.display = 'none';
+    });
+
+    document.addEventListener('mouseenter', () => {
+        cursorGlow.style.display = 'block';
+    });
+
+    // Scroll Reveal Animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-scroll');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Apply scroll reveal to sections
+    document.querySelectorAll('section').forEach((section) => {
+        section.classList.add('fade-in-scroll');
+        observer.observe(section);
+    });
+
+    // Apply floating animation to project cards
+    document.querySelectorAll('article').forEach((article, index) => {
+        article.classList.add('float-animation');
+        article.style.animationDelay = (index * 0.5) + 's';
+    });
+
+    // Add shine effect to buttons
+    document.querySelectorAll('.indigo-gradient, .bg-primary').forEach((btn) => {
+        if (btn.tagName === 'A' || btn.tagName === 'BUTTON') {
+            btn.classList.add('btn-shine');
+        }
+    });
+
+    // Text reveal for hero headline
+    const heroHeadline = document.querySelector('h1');
+    if (heroHeadline) {
+        const text = heroHeadline.innerHTML;
+        heroHeadline.innerHTML = text.split('<br/>').map((span) => 
+            `<span class="reveal-text inline-block">${span}</span>`
+        ).join('<br/>');
+    }
+
+    // Staggered reveal for skill cards
+    document.querySelectorAll('.glass-card').forEach((card, index) => {
+        card.style.animation = 'fadeInUp 0.8s ease-out forwards';
+        card.style.animationDelay = (index * 0.1) + 's';
+    });
+</script>
+</body></html>
