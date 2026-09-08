@@ -1,810 +1,884 @@
-Hero
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AyoolaTheDev | Fullstack web developer</title>
-<meta name="description" content="I'm AyoolaTheDev - a Full-stack web developer passionate about building modern, responsive, and blockchain
-        integrated web applications. Explore my projects and experience">
-<meta name="keywords" content="AyoolaTheDev, Fullstack web developer, Frontend web developer, Web3 Developer, React, Javascript, HTML, developer portfolio,CSS">
-<meta name="author" content="AyoolaTheDev">
-<meta name="robots" content="index, follow">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed": "#ce9bff",
-                    "error-container": "#a70138",
-                    "primary-dim": "#6063ee",
-                    "tertiary-fixed-dim": "#c488ff",
-                    "on-tertiary-container": "#000000",
-                    "surface-container-highest": "#23262c",
-                    "error": "#ff6e84",
-                    "surface-tint": "#a3a6ff",
-                    "primary": "#a3a6ff",
-                    "surface-container-high": "#1d2025",
-                    "surface-container-low": "#111318",
-                    "on-surface": "#f6f6fc",
-                    "secondary-fixed": "#65e1ff",
-                    "tertiary-container": "#af5cfe",
-                    "surface-container-lowest": "#000000",
-                    "background": "#0c0e12",
-                    "primary-fixed": "#9396ff",
-                    "surface": "#0c0e12",
-                    "secondary-fixed-dim": "#48d4f3",
-                    "on-primary-fixed": "#000000",
-                    "on-primary-container": "#0a0081",
-                    "primary-fixed-dim": "#8387ff",
-                    "on-tertiary-fixed": "#270048",
-                    "primary-container": "#9396ff",
-                    "tertiary-fixed": "#ce9bff",
-                    "error-container": "#a70138",
-                    "primary-dim": "#6063ee",
-                    "tertiary-fixed-dim": "#c488ff",
-                    "on-tertiary-container": "#000000",
-                    "surface-container-highest": "#23262c",
-                    "error": "#ff6e84",
-                    "surface-tint": "#a3a6ff",
-                    "primary": "#a3a6ff",
-                    "surface-container-high": "#1d2025",
-                    "surface-container-low": "#111318",
-                    "on-surface": "#f6f6fc",
-                    "secondary-fixed": "#65e1ff",
-                    "tertiary-container": "#af5cfe",
-                    "surface-container-lowest": "#000000",
-                    "background": "#0c0e12",
-                    "primary-fixed": "#9396ff",
-                    "surface": "#0c0e12",
-                    "secondary-fixed-dim": "#48d4f3",
-                    "on-primary-fixed": "#000000",
-                    "on-primary-container": "#0a0081",
-                    "primary-fixed-dim": "#8387ff",
-                    "on-tertiary-fixed": "#270048",
-                    "primary-container": "#9396ff",
-                    "on-tertiary-fixed-variant": "#560094",
-                    "on-background": "#f6f6fc",
-                    "tertiary": "#c180ff",
-                    "on-error": "#490013",
-                    "secondary": "#53ddfc",
-                    "surface-container": "#171a1f",
-                    "surface-dim": "#0c0e12",
-                    "on-primary-fixed-variant": "#0e009d",
-                    "on-secondary-fixed-variant": "#005969",
-                    "outline": "#74757a",
-                    "on-surface-variant": "#aaabb0",
-                    "outline-variant": "#46484d",
-                    "inverse-on-surface": "#53555a",
-                    "inverse-primary": "#494bd7",
-                    "on-primary": "#0f00a4",
-                    "on-tertiary": "#33005b",
-                    "surface-bright": "#292c32",
-                    "surface-variant": "#23262c",
-                    "on-error-container": "#ffb2b9",
-                    "on-secondary-container": "#ecfaff",
-                    "on-secondary": "#004b58",
-                    "on-secondary-fixed": "#003a45",
-                    "tertiary-dim": "#9c48ea",
-                    "inverse-surface": "#f9f9ff",
-                    "error-dim": "#d73357",
-                    "secondary-dim": "#40ceed",
-                    "secondary-container": "#00687a"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Space Grotesk"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AyoolaTheDev — Full-Stack Developer</title>
+<meta name="description" content="AyoolaTheDev — Full-Stack Developer building production web applications with React, Next.js, Node.js and PostgreSQL. Lead Instructor at Tech2Grassroots Africa / Kwara Innovation Lab." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%2314171A'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23F6F5F0' text-anchor='middle'%3EAJ%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-     body {
-            background-color: #0c0e12;
-            color: #f6f6fc;
-            font-family: 'Inter', sans-serif;
-             -webkit-font-smoothing: antialiased;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-           .glass-card {
-            background: rgba(23, 26, 31, 0.7);
-            backdrop-filter: blur(12px) saturate(150%);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .mesh-gradient {
-            background-color: #0c0e12;
-            background-image:
-                radial-gradient(at 0% 0%, rgba(163, 166, 255, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(193, 128, 255, 0.15) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(83, 221, 252, 0.1) 0px, transparent 50%);
-        }
-        .kinetic-text {
-            -webkit-text-stroke: 1px rgba(246, 246, 252, 0.1);
-            color: transparent;
-            background: linear-gradient(180deg, #f6f6fc 0%, rgba(246, 246, 252, 0.2) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-        .glass-card {
-            background: rgba(23, 26, 31, 0.7);
-            backdrop-filter: blur(12px) saturate(150%);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(23, 26, 31, 0.7);
-            backdrop-filter: blur(12px) saturate(150%);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .kinetic-title {
-            letter-spacing: -0.04em;
-        }
-        .glow-hover:hover {
-            box-shadow: 0px 0px 40px rgba(163, 166, 255, 0.15);
-        }
-               .text-glow {
-            text-shadow: 0 0 20px rgba(163, 166, 255, 0.3);
-        }
-        .indigo-gradient {
-            background: linear-gradient(135deg, #a3a6ff 0%, #9396ff 100%);
-        }
-               .glass-panel {
-            background: rgba(23, 26, 31, 0.7);
-            backdrop-filter: blur(12px) saturate(150%);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .glow-indigo {
-            box-shadow: 0 0 20px rgba(163, 166, 255, 0.2);
-        }
-        .text-glow {
-            text-shadow: 0 0 8px rgba(163, 166, 255, 0.4);
-        }
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0c0e12;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #46484d;
-            border-radius: 10px;
-        }
+  :root{
+    --bg:#F6F5F0;
+    --surface:#FFFFFF;
+    --ink:#15181B;
+    --muted:#686C72;
+    --faint:#9A9D9F;
+    --line:#DFDBD0;
+    --line-soft:#E9E6DC;
+    --accent:#1F6E52;
+    --accent-ink:#0F4335;
+    --accent-soft:rgba(31,110,82,.09);
+    --radius:3px;
+    --maxw:1120px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent); color:#fff;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  h1,h2,h3{
+    font-family:'Space Grotesk', sans-serif;
+    margin:0;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 
-        /* ===== WOW ANIMATIONS ===== */
-        
-        /* Text Reveal Animation */
-        @keyframes textReveal {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+  /* faint graph texture on the page background */
+  body{
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: -1px -1px;
+  }
 
-        .reveal-text {
-            animation: textReveal 1.8s ease-out forwards;
-        }
+  /* ---------- header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(246,245,240,0);
+    border-bottom:1px solid transparent;
+    transition:background .3s var(--ease), border-color .3s var(--ease);
+  }
+  header.scrolled{
+    background:rgba(246,245,240,.92);
+    border-bottom-color:var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    height:72px;
+  }
+  .mark{
+    display:flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px; font-weight:500;
+    text-decoration:none;
+  }
+  .mark-box{
+    width:28px; height:28px; border:1.5px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-size:11px; letter-spacing:0.02em;
+  }
+  .nav-links{
+    display:flex; align-items:center; gap:36px;
+    list-style:none; margin:0; padding:0;
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-size:14px;
+    color:var(--muted);
+    position:relative;
+    padding-bottom:3px;
+    transition:color .2s var(--ease);
+  }
+  .nav-links a::after{
+    content:'';
+    position:absolute; left:0; bottom:0;
+    width:0; height:1px; background:var(--ink);
+    transition:width .25s var(--ease);
+  }
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    font-size:13px;
+    color:var(--ink);
+    text-decoration:none;
+    border:1px solid var(--ink);
+    padding:8px 16px;
+    border-radius:var(--radius);
+    transition:background .2s var(--ease), color .2s var(--ease);
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--ink); color:var(--bg);}
+  .menu-btn{
+    display:none;
+    background:var(--surface); border:1px solid var(--line); border-radius:6px;
+    width:40px; height:40px;
+    align-items:center; justify-content:center;
+    cursor:pointer;
+    transition:all .2s var(--ease);
+  }
+  .menu-btn:hover{
+    border-color:var(--accent);
+    background:var(--accent-soft);
+  }
+  .menu-btn svg{width:18px; height:18px;}
+  .mobile-panel{
+    display:none;
+    position:fixed; top:70px; right:28px; z-index:99;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:8px;
+    flex-direction:column; gap:0;
+    width:200px;
+    box-shadow:0 10px 32px rgba(21,24,27,0.15);
+    animation:slideDown .25s var(--ease) forwards;
+  }
+  @keyframes slideDown{
+    from{opacity:0; transform:translateY(-10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  .mobile-panel.open{display:flex;}
+  .mobile-panel a{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:14px; text-decoration:none; color:var(--ink);
+    padding:12px 16px;
+    transition:all .2s var(--ease);
+    border-radius:4px;
+    margin:2px 0;
+  }
+  .mobile-panel a:hover{
+    background:var(--accent-soft);
+    color:var(--accent-ink);
+  }
+  .mobile-panel .nav-cta{
+    border-top:1px solid var(--line);
+    padding:12px 16px;
+    margin:8px 0 0 0;
+  }
+  .mobile-panel .nav-cta:hover{
+    background:var(--accent);
+    color:#fff;
+  }
 
-        .reveal-text:nth-child(1) { animation-delay: 0.1s; }
-        .reveal-text:nth-child(2) { animation-delay: 0.3s; }
-        .reveal-text:nth-child(3) { animation-delay: 0.5s; }
+  @media (max-width:860px){
+    .nav-links, .header-cta{display:none;}
+    .menu-btn{display:flex;}
+  }
 
-        /* Fade In Scroll Animation */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+  /* ---------- hero ---------- */
+  .hero{
+    padding:180px 0 120px;
+    max-width:900px;
+    margin:0 auto;
+  }
+  .hero .line{
+    opacity:0; transform:translateY(16px);
+    animation:reveal .75s var(--ease) forwards;
+  }
+  .hero .line:nth-child(1){animation-delay:.08s;}
+  .hero .line:nth-child(2){animation-delay:.16s;}
+  .hero .line:nth-child(3){animation-delay:.28s;}
+  .hero .line:nth-child(4){animation-delay:.40s;}
+  .hero .line:nth-child(5){animation-delay:.52s;}
+  @keyframes reveal{
+    to{opacity:1; transform:translateY(0);}
+  }
+  .prompt{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--accent);
+    display:flex; align-items:center; gap:8px;
+    margin-bottom:24px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  .prompt .cursor{
+    display:inline-block; width:6px; height:14px; background:var(--accent);
+    animation:blink 1.2s steps(1) infinite;
+  }
+  @keyframes blink{50%{opacity:0;}}
+  .hero h1{
+    font-size:clamp(48px, 7vw, 72px);
+    line-height:1.1;
+    margin-bottom:28px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    color:var(--ink);
+  }
+  .hero p.lede{
+    font-size:17px; color:var(--muted); max-width:640px;
+    margin-bottom:48px;
+    line-height:1.7;
+  }
+  .kv-row{
+    display:grid; grid-template-columns:repeat(3,minmax(180px,1fr)); gap:28px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:14px; color:var(--muted);
+    margin-bottom:56px;
+    padding-bottom:28px; border-bottom:1px solid var(--line);
+  }
+  .kv-row span{display:flex; flex-direction:column; gap:6px;}
+  .kv-row span b{color:var(--ink); font-weight:600; font-size:15px;}
+  .hero-cta{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
 
-        .fade-in-scroll {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        /* Floating/Levitation Animation */
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .float-animation:nth-child(1) { animation-delay: 0s; }
-        .float-animation:nth-child(2) { animation-delay: 0.5s; }
-        .float-animation:nth-child(3) { animation-delay: 1s; }
-        .float-animation:nth-child(4) { animation-delay: 1.5s; }
-
-        /* Cursor Glow Particle */
-        .cursor-glow {
-            position: fixed;
-            width: 30px;
-            height: 30px;
-            border: 2px solid rgba(163, 166, 255, 0.6);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            box-shadow: inset 0 0 10px rgba(163, 166, 255, 0.4), 0 0 20px rgba(163, 166, 255, 0.3);
-            transition: width 0.1s, height 0.1s;
-            display: none;
-        }
-
-        @media (hover: hover) {
-            .cursor-glow {
-                display: block;
-            }
-        }
-
-        /* Scale Up Animation for Interactive Elements */
-        @keyframes scaleIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .scale-in {
-            animation: scaleIn 0.6s ease-out;
-        }
-
-        /* Shine Effect for Buttons */
-        @keyframes shine {
-            0% {
-                background-position: -1000px 0;
-            }
-            100% {
-                background-position: 1000px 0;
-            }
-        }
-
-        .btn-shine {
-            background-size: 1000px 100%;
-            background-position: 0 0;
-            transition: background-position 0.5s ease;
-        }
-
-        .btn-shine:hover {
-            animation: shine 0.6s ease-in-out;
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
+  @media (max-width:700px){
+    .hero{
+      padding:140px 20px 80px 24px;
     }
-  </style>
-  </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
-<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl shadow-[0px_24px_80px_rgba(0,0,0,0.5)]">
-<nav class="flex justify-between items-center px-6 h-20 max-w-[1440px] mx-auto">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-indigo-400 text-2xl">blur_on</span>
-<span class="text-xl font-bold tracking-widest text-slate-50 font-headline uppercase">AyoolaTheDev</span>
-</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-indigo-400 font-bold font-headline tracking-tighter uppercase hover:text-primary transition-colors" href="#projects">PROJECTS</a>
-<a class="text-slate-400 hover:text-slate-50 transition-colors font-headline tracking-tighter uppercase" href="#skills">SKILLS</a>
-<a class="text-slate-400 hover:text-slate-50 transition-colors font-headline tracking-tighter uppercase" href="#experience">EXPERIENCE</a>
-<a class="text-slate-400 hover:text-slate-50 transition-colors font-headline tracking-tighter uppercase" href="#contact">CONTACT</a>
-</div>
-<div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-slate-400 text-xs font-mono">
-                ⌘ K
-            </div>
-</nav>
+    .hero h1{
+      font-size:clamp(36px, 8vw, 52px);
+      margin-bottom:20px;
+    }
+    .hero p.lede{
+      font-size:16px;
+      margin-bottom:36px;
+    }
+    .kv-row{
+      grid-template-columns:1fr;
+      gap:18px;
+      margin-bottom:40px;
+      padding-bottom:20px;
+      font-size:13px;
+    }
+    .kv-row span b{font-size:14px;}
+    .hero-cta{
+      gap:12px;
+    }
+    .btn{
+      padding:12px 22px;
+      font-size:14px;
+    }
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    text-decoration:none; font-size:15px; font-weight:500; padding:14px 28px;
+    border-radius:6px;
+    transition:all .3s var(--ease);
+    border:1.5px solid transparent;
+    cursor:pointer;
+    letter-spacing:-0.3px;
+  }
+  .btn-solid{
+    background:var(--ink); color:var(--bg);
+    box-shadow:0 4px 12px rgba(21,24,27,0.15);
+  }
+  .btn-solid:hover{
+    background:var(--accent); color:#fff;
+    box-shadow:0 8px 20px rgba(31,110,82,0.2);
+    transform:translateY(-2px);
+  }
+  .btn-outline{
+    border-color:var(--ink); color:var(--ink);
+    background:transparent;
+  }
+  .btn-outline:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+    background:rgba(31,110,82,0.04);
+    transform:translateY(-2px);
+  }
+  .btn svg{width:16px; height:16px; transition:transform .3s var(--ease);}
+  .btn:hover svg{transform:translate(3px,-3px);}
+
+  /* ---------- section shell ---------- */
+  section{padding:88px 0; border-top:1px solid var(--line);}
+  .sec-head{
+    display:grid; grid-template-columns:200px 1fr; gap:32px;
+    margin-bottom:52px;
+  }
+  .sec-head .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--faint);
+    padding-top:6px;
+  }
+  .sec-head h2{font-size:clamp(26px,3.4vw,34px);}
+  .sec-head .sub{color:var(--muted); font-size:15px; margin-top:10px; max-width:480px;}
+  @media (max-width:700px){
+    .sec-head{grid-template-columns:1fr; gap:10px;}
+  }
+
+  /* ---------- summary ---------- */
+  .summary-grid{
+    display:grid; grid-template-columns:200px 1fr; gap:32px;
+  }
+  .summary-grid p{
+    font-size:17px; color:var(--ink); max-width:640px;
+  }
+  .fact-strip{
+    display:grid; grid-template-columns:repeat(3,1fr);
+    gap:1px; background:var(--line);
+    margin-top:44px; border:1px solid var(--line);
+  }
+  .fact{
+    background:var(--surface); padding:26px 24px;
+  }
+  .fact .num{
+    font-family:'Space Grotesk', sans-serif; font-size:32px; font-weight:600;
+    color:var(--accent-ink);
+  }
+  .fact .label{font-size:13px; color:var(--muted); margin-top:4px;}
+  @media (max-width:700px){
+    .summary-grid{grid-template-columns:1fr;}
+    .fact-strip{grid-template-columns:1fr;}
+  }
+
+  /* ---------- experience ---------- */
+  .xp-item{
+    display:grid; grid-template-columns:150px 1fr; gap:32px;
+    padding:28px 0; border-top:1px solid var(--line-soft);
+  }
+  .xp-item:first-of-type{border-top:none;}
+  .xp-period{
+    font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--muted);
+    padding-top:3px;
+  }
+  .xp-role{font-size:19px; font-weight:600; font-family:'Space Grotesk',sans-serif;}
+  .xp-org{font-size:14px; color:var(--accent-ink); margin-top:2px; margin-bottom:14px;}
+  .xp-item ul{margin:0; padding-left:18px; color:var(--muted); font-size:15px;}
+  .xp-item li{margin-bottom:8px;}
+  .xp-item li::marker{color:var(--faint);}
+  @media (max-width:700px){
+    .xp-item{grid-template-columns:1fr; gap:8px;}
+  }
+
+  /* ---------- projects ---------- */
+  .proj{
+    border-top:1px solid var(--line-soft);
+    padding:36px 0;
+    display:grid; grid-template-columns:1fr 340px; gap:40px; align-items:center;
+  }
+  .proj:first-of-type{border-top:none;}
+  .proj-body h3{font-size:22px; margin-bottom:4px;}
+  .proj-index{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--faint); margin-bottom:10px; display:block;}
+  .proj-desc{color:var(--muted); font-size:15px; max-width:480px; margin:12px 0 18px;}
+  .stack-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;}
+  .chip{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px;
+    border:1px solid var(--line); border-radius:2px;
+    padding:4px 9px; color:var(--muted);
+  }
+  .proj-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:14px; text-decoration:none; color:var(--ink);
+    border-bottom:1px solid var(--ink); padding-bottom:2px;
+  }
+  .proj-link svg{width:13px; height:13px; transition:transform .2s var(--ease);}
+  .proj-link:hover svg{transform:translate(2px,-2px);}
+  .proj-link.disabled{
+    color:var(--faint); border-bottom-color:var(--line); pointer-events:none;
+  }
+  .shot{
+    aspect-ratio:16/10;
+    border:2px solid var(--line);
+    border-radius:8px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:10px; color:var(--faint);
+    background:var(--surface);
+    transition:all .35s var(--ease);
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(21,24,27,0.06), 0 0 0 1px rgba(21,24,27,0.03);
+    position:relative;
+  }
+  .shot::before{
+    content:'';
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background:linear-gradient(135deg, rgba(31,110,82,0) 0%, rgba(31,110,82,0.02) 100%);
+    pointer-events:none;
+  }
+  .proj:hover .shot{
+    border-color:var(--accent);
+    color:var(--accent-ink);
+    box-shadow:0 12px 32px rgba(31,110,82,0.12), 0 0 0 2px rgba(31,110,82,0.15);
+    transform:translateY(-6px);
+  }
+  .shot svg{width:26px; height:26px;}
+  .shot span{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.02em;}
+  .shot img{
+    transition:transform .35s var(--ease), filter .35s var(--ease);
+    object-fit:cover;
+  }
+  .proj:hover .shot img{
+    transform:scale(1.04);
+    filter:brightness(1.05);
+  }
+  @media (max-width:800px){
+    .proj{grid-template-columns:1fr; gap:20px;}
+    .shot{order:-1;}
+  }
+
+  /* ---------- skills ---------- */
+  .skill-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .skill-cat{background:var(--surface); padding:28px;}
+  .skill-cat .head{display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+  .skill-cat svg{width:17px; height:17px; color:var(--accent-ink);}
+  .skill-cat h4{
+    font-family:'Space Grotesk', sans-serif; font-size:15px; font-weight:600;
+    margin:0;
+  }
+  .skill-cat .items{color:var(--muted); font-size:14.5px; line-height:1.7;}
+  @media (max-width:700px){
+    .skill-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- education / strengths ---------- */
+  .two-col{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px;
+  }
+  .two-col h4{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--faint);
+    text-transform:none; margin-bottom:18px;
+  }
+  .edu-item{margin-bottom:20px;}
+  .edu-item .t{font-size:16px; font-weight:500; font-family:'Space Grotesk',sans-serif;}
+  .edu-item .s{font-size:13.5px; color:var(--muted); margin-top:2px;}
+  .strength-list{list-style:none; margin:0; padding:0;}
+  .strength-list li{
+    padding:11px 0; border-top:1px solid var(--line-soft);
+    font-size:15px; color:var(--ink);
+    display:flex; gap:12px; align-items:baseline;
+  }
+  .strength-list li:first-child{border-top:none;}
+  .strength-list li::before{
+    content:'—'; color:var(--accent); font-family:'IBM Plex Mono', monospace; flex-shrink:0;
+  }
+  @media (max-width:700px){.two-col{grid-template-columns:1fr; gap:36px;}}
+
+  /* ---------- contact ---------- */
+  .contact-inner{
+    display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:end;
+  }
+  .contact-inner h2{font-size:clamp(30px,4.5vw,44px); max-width:460px;}
+  .contact-list{list-style:none; margin:0; padding:0;}
+  .contact-list li{border-top:1px solid var(--line-soft);}
+  .contact-list li:first-child{border-top:1px solid var(--line);}
+  .contact-list a{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 4px; text-decoration:none; color:var(--ink); font-size:16px;
+  }
+  .contact-list a span.ch{display:flex; align-items:center; gap:12px;}
+  .contact-list svg{width:17px; height:17px; color:var(--muted); transition:color .2s var(--ease);}
+  .contact-list a:hover svg{color:var(--accent-ink);}
+  .contact-list .arr{width:14px; height:14px; transition:transform .2s var(--ease); color:var(--faint);}
+  .contact-list a:hover .arr{transform:translate(3px,-3px); color:var(--ink);}
+  @media (max-width:700px){.contact-inner{grid-template-columns:1fr;}}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:32px 0;
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--faint);
+    flex-wrap:wrap; gap:10px;
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap nav">
+    <a href="#top" class="mark">AyoolaTheDev</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta header-cta">Get in touch</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
 </header>
-<main class="relative min-h-screen flex flex-col overflow-hidden mesh-gradient">
-<div class="absolute inset-0 pointer-events-none opacity-40">
-<div class="absolute top-1/4 left-1/4 w-1 h-1 bg-primary rounded-full blur-[1px]"></div>
-<div class="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-secondary rounded-full blur-[1px]"></div>
-<div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-tertiary rounded-full blur-[1px]"></div>
-<div class="absolute top-3/4 right-1/4 w-1 h-1 bg-primary-dim rounded-full blur-[1px]"></div>
-</div>
 
-<section id="hero" class="relative flex-grow flex flex-col items-center justify-center pt-32 px-6 text-center">
-<div class="mb-6 flex flex-col items-center gap-2">
-<span class="label-md text-primary tracking-[0.3em] font-medium uppercase text-[10px]">Fullstack Developer · React · Node.js</span>
-<div class="h-[1px] w-12 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-</div>
-<div class="relative z-10 select-none">
-<h1 class="font-headline font-black text-4xl sm:text-5xl md:text-6xl tracking-tight leading-[1.2] max-w-3xl">
-<span class="block kinetic-text mb-3">I build full-stack</span>
-<span class="block text-on-surface mb-3">web applications from concept to production</span>
-<span class="block kinetic-text">using modern technologies & cloud infrastructure</span>
-</h1>
+<nav class="mobile-panel" id="mobilePanel">
+  <a href="#projects">Work</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="nav-cta">Get in touch</a>
+</nav>
 
+<main id="top">
 
+  <section class="hero" style="border-top:none; padding-top:168px;">
+    <div class="wrap" style="padding:0;">
+        <div class="prompt line">Full-Stack Developer &amp; Lead Instructor<span class="cursor"></span></div>
+      <h1 class="line">AyoolaTheDev</h1>
+      <p class="lede line">Full-stack developer building production web applications end to end from React and Next.js front ends to Node.js and Express APIs backed by PostgreSQL and Supabase for NGOs, tech initiatives and startups across Nigeria.</p>
+      <div class="kv-row line">
+        <span>role: <b>Full-Stack Developer &amp; Lead Instructor</b></span>
+        <span>based: <b>Ilorin, Kwara State, Nigeria</b></span>
+        <span>stack: <b>React, Next.js, Node.js, PostgreSQL</b></span>
+      </div>
+      <div class="hero-cta line">
+        <a href="#projects" class="btn btn-solid">View work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
+    </div>
+  </section>
 
-</div>
-<div class="relative w-full max-w-sm mt-12 mb-16">
-<div class="glass-card p-4 rounded-xl absolute -top-8 -left-4 z-20 shadow-2xl rotate-[-4deg] border-l-2 border-primary/30">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-sm">folder_open</span>
-</div>
-<div class="text-left">
-<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label">Portfolio</p>
-<p class="text-xs font-bold text-on-surface">10+ Projects</p>
-</div>
-</div>
-</div>
-<div class="glass-card px-4 py-2 rounded-full absolute -bottom-10 -right-2 z-20 shadow-xl rotate-[2deg] flex items-center gap-2">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
-<span class="text-[10px] font-mono text-secondary tracking-tighter">OPEN_TO_OPPORTUNITIES</span>
-</div>
-<div class="aspect-square w-full bg-surface-container rounded-full overflow-hidden relative border border-white/5 shadow-[0px_0px_100px_rgba(163,166,255,0.1)]">
-<img class="w-full h-full object-cover mix-blend-screen opacity-80" data-alt="Abstract 3D rendered obsidian spheres floating in a liquid indigo void with neon cyan light highlights and deep depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwHmOxZK3lWsMxUXGFLLQuWJ7gPKVyrPXF8xzSsam12wPFeidN_O1cpt7Q4ngRthcdaf5KmfRImgRUuZ0wwaoI6LU8mljeWJOTr0qk4oifu9DYtfU7wBM4dAbFBRxGS5ajtEjLj0uUdC5M7bjt7ISTbfpSjrLntG64IgeOrnZU2kB0mSORiK7YrQn1b-pmSfZFl6F5cwory8OBXCS7R_CPtZL9Sr42AcVW-FgfuCm97rtDosf3SBn28uVnM28nw4335gnJgglmdf_A"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-</div>
-</div>
-<div class="flex flex-col sm:flex-row gap-4 items-center">
-<div class="relative group">
-<div class="absolute -inset-1 bg-gradient-to-r from-primary to-tertiary rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-<a href="#projects" class="relative flex items-center gap-3 px-10 py-5 bg-primary text-on-primary font-headline font-bold rounded-full text-lg tracking-tight hover:scale-105 transition-all active:scale-95 shadow-[0px_0px_40px_rgba(163,166,255,0.4)] cursor-pointer">
-                    VIEW PROJECTS
-                    <span class="material-symbols-outlined font-bold">arrow_forward</span>
-</a>
-</div>
-<a href="https://github.com/Ayoola05617" target="_blank" class="flex items-center gap-3 px-8 py-5 bg-surface-container border border-white/20 hover:border-primary/50 text-on-surface hover:text-primary font-headline font-bold rounded-full text-lg tracking-tight hover:scale-105 transition-all active:scale-95 cursor-pointer">
-                    GITHUB
-                    <span class="material-symbols-outlined font-bold">code</span>
-</a>
-</div>
-<div class="mt-24 mb-8 flex flex-col items-center gap-4 opacity-40">
-<p class="text-[10px] tracking-[0.4em] uppercase font-label">Descend</p>
-<div class="w-[1px] h-12 bg-gradient-to-b from-on-surface to-transparent"></div>
-</div>
-</section>
-<section class="px-6 mb-32 mt-12">
-<div class="max-w-5xl mx-auto">
-<div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-lowest border border-white/5 group">
-<div class="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none"></div>
-<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+  <section id="about">
+    <div class="wrap">
+      <div class="summary-grid">
+        <div class="tag mono">summary</div>
+        <div>
+          <p>Full-Stack Developer with proven strength across the modern JavaScript and TypeScript ecosystem. Track record delivering marketing sites, referral and registration portals, AI-powered platforms, and multi-role management systems for NGOs, tech initiatives, and startups. Currently a Full-Stack Developer and Lead Instructor at Tech2Grassroots Africa, combining hands-on engineering with technical instruction known for a strong eye for UI/UX, clean and maintainable code, and thriving in fast-paced, ambiguous environments.</p>
+        </div>
+      </div>
+      <div class="fact-strip">
+        <div class="fact"><div class="num">10+</div><div class="label">Projects shipped</div></div>
+        <div class="fact"><div class="num">2+</div><div class="label">Years of experience</div></div>
+        <div class="fact"><div class="num">500+</div><div class="label">Users reached</div></div>
+      </div>
+    </div>
+  </section>
 
-<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
-<div class="flex flex-col justify-between">
-<div>
-<div class="inline-block mb-4">
-<span class="text-primary font-label text-[10px] tracking-[0.3em] uppercase px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">Featured Work</span>
-</div>
-<h2 class="font-headline text-3xl md:text-4xl font-black mb-4 leading-tight tracking-tighter">
-Build faster with <span class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">clean, scalable</span> code
-</h2>
-<p class="text-on-surface-variant text-base leading-relaxed mb-8 max-w-lg">
-I specialize in crafting full-stack solutions that combine beautiful UX with robust backend architecture. Every project is optimized for performance, maintainability, and user experience.
-</p>
-</div>
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag mono">experience</div>
+        <div>
+          <h2>The work log</h2>
+          <p class="sub">Where I've built, taught, and shipped.</p>
+        </div>
+      </div>
 
-<div class="grid grid-cols-3 gap-4">
-<div class="bg-black/30 rounded-xl p-4 border border-white/5 backdrop-blur-sm">
-<p class="text-primary font-headline text-2xl font-bold">10+</p>
-<p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Projects</p>
-</div>
-<div class="bg-black/30 rounded-xl p-4 border border-white/5 backdrop-blur-sm">
-<p class="text-secondary font-headline text-2xl font-bold">500+</p>
-<p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Users Reached</p>
-</div>
-<div class="bg-black/30 rounded-xl p-4 border border-white/5 backdrop-blur-sm">
-<p class="text-tertiary font-headline text-2xl font-bold">2+</p>
-<p class="text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Years Exp</p>
-</div>
-</div>
-</div>
+      <div class="xp-item">
+        <div class="xp-period mono">2024 — Present<br/>Ilorin, Nigeria</div>
+        <div>
+          <div class="xp-role">Full-Stack Developer &amp; Lead Instructor</div>
+          <div class="xp-org">Tech2Grassroots Africa / Kwara Innovation Lab</div>
+          <ul>
+            <li>Built a full-stack management system for Kwara Innovation Lab using Node.js, Express, Prisma ORM and PostgreSQL (Supabase), with role-based access control for Admin, Instructor and Student via JWT authentication.</li>
+            <li>Designed and shipped 12+ connected screens covering user management, cohort/course administration, assignments, a three-tier attendance workflow, and student payment tracking with receipt generation.</li>
+            <li>Engineered an auto-generated matriculation number system used as default student credentials, and modelled many-to-many student/instructor-to-course relationships in the schema.</li>
+            <li>Designed and built the full digital infrastructure for KIL's June 2026 cohort launch, including a lead-capture landing page with Formspree backend integration.</li>
+            <li>Developed an animated member registration and referral portal with a custom referral code engine and session management.</li>
+            <li>Built an AI-powered Career Discovery Platform using the Google Gemini API, letting students explore tech career pathways through a conversational interface.</li>
+            <li>Lead instructor for frontend web development and an AI Bootcamp — authored course material, hands-on assignments, and a certification conversion funnel for cohort students.</li>
+          </ul>
+        </div>
+      </div>
 
-<div class="relative h-64 md:h-full rounded-2xl overflow-hidden border border-white/10 bg-surface-container-low group">
-<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent group-hover:from-primary/30 transition-all duration-500"></div>
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-     data-alt="Portfolio showcase"
-     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwHmOxZK3lWsMxUXGFLLQuWJ7gPKVyrPXF8xzSsam12wPFeidN_O1cpt7Q4ngRthcdaf5KmfRImgRUuZ0wwaoI6LU8mljeWJOTr0qk4oifu9DYtfU7wBM4dAbFBRxGS5ajtEjLj0uUdC5M7bjt7ISTbfpSjrLntG64IgeOrnZU2kB0mSORiK7YrQn1b-pmSfZFl6F5cwory8OBXCS7R_CPtZL9Sr42AcVW-FgfuCm97rtDosf3SBn28uVnM28nw4335gnJgglmdf_A"
-     alt="Portfolio work"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-</div>
-</div>
+      <div class="xp-item">
+        <div class="xp-period mono">Jul 2026<br/>Remote</div>
+        <div>
+          <div class="xp-role">Backend Developer (Contract)</div>
+          <div class="xp-org">workaservices.com</div>
+          <ul>
+            <li>Built backend services for a service-marketplace platform connecting service providers and customers for booking, using Express, Prisma ORM and PostgreSQL, with Supabase handling authentication and data management.</li>
+            <li>Designed and implemented REST APIs to support core booking and platform functionality.</li>
+          </ul>
+        </div>
+      </div>
 
-<div class="relative z-10 px-8 md:px-12 py-6 border-t border-white/5 flex items-center justify-between">
-<p class="text-on-surface-variant text-sm">Ready to see more of my work?</p>
-<a href="#projects" class="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dim text-on-primary font-headline font-bold rounded-full text-sm tracking-widest uppercase transition-all hover:scale-105 active:scale-95">
-Explore All Projects
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
+      <div class="xp-item">
+        <div class="xp-period mono">Jan 2026 — Present<br/>Remote</div>
+        <div>
+          <div class="xp-role">Co-Developer</div>
+          <div class="xp-org">Owl Assist</div>
+          <ul>
+            <li>Contributing as co-developer on Owl Assist, a 24/7 AI-powered personal assistant platform currently in production.</li>
+            <li>Built the product's public waitlist landing page to capture early-access leads ahead of launch.</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="xp-item">
+        <div class="xp-period mono">2025<br/>Remote</div>
+        <div>
+          <div class="xp-role">Frontend Developer (Contract)</div>
+          <div class="xp-org">Digital Innovation School Nigeria</div>
+          <ul>
+            <li>Built the public waitlist page for the school's launch campaign.</li>
+            <li>Developed the frontend of the Digital Innovation School Nigeria portal, including registration flows and dashboard UI.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="projects" class="mb-22 py-16 text-center">
-<span class="text-secondary font-label text-xs tracking-[0.3em] uppercase mb-6 block inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30">Selected Works</span>
-<h1 class="font-headline text-6xl md:text-8xl font-black kinetic-title bg-gradient-to-r from-on-surface via-primary to-on-surface bg-clip-text text-transparent leading-none mb-6 tracking-tighter">
-                Digital <br/>Artifacts.
-            </h1>
-<p class="text-on-surface-variant max-w-2xl text-base md:text-lg leading-relaxed font-body mx-auto md:px-8 mb-12">
-                A curation of high-fidelity engineering and cinematic interface design. Each project is a study in precision and depth.
-            </p>
-<div class="flex flex-col gap-25">
-<article class="group relative">
-<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
-<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="img" src="Screenshot 2026-04-06 122825.png" loading="lazy"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
-</div>
-<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
-<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">HTML</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TAILWIND CSS</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">JAVASCRIPT</span>
-</div>
-<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">OwlAssist's Waitlist</h2>
-<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">An intelligent AI-powered assistant application that provides real-time guidance and analysis. Built with a focus on responsive design and seamless user interactions.</p>
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag mono">selected projects</div>
+        <div>
+          <h2>Things I've shipped</h2>
+          <p class="sub">Screenshots below are placeholders — swap the <span class="mono">.shot</span> block for a real image whenever you're ready.</p>
+        </div>
+      </div>
 
-<div class="flex items-center gap-2 md:gap-4">
-<a href="www.owlassist.cloud" target="_blank" class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
-<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
-</div>
+      <div class="proj">
+        <div class="proj-body">
+          <span class="proj-index mono">01 / internal platform</span>
+          <h3>Kwara Innovation Lab Management System</h3>
+          <p class="proj-desc">Full-stack platform for admin, instructor and student operations — role-based access, cohort and course administration, assignments, attendance, and payment tracking.</p>
+          <div class="stack-row">
+            <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Tailwind CSS</span>
+          </div>
+          <span class="proj-link disabled">Internal platform<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+        </div>
+        <div class="shot">
+          <img src="kwil.png" alt="Kwara Innovation Lab Management System screenshot" style="height: 100%; width: 100%;">
+        </div>
+      </div>
 
-</div>
+      <div class="proj">
+        <div class="proj-body">
+          <span class="proj-index mono">02 / organisation site</span>
+          <h3>Tech2Grassroots Africa</h3>
+          <p class="proj-desc">Official organisation website for Tech2Grassroots Africa.</p>
+          <div class="stack-row">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Formspree</span>
+          </div>
+          <a href="https://tech2grassroots.africa" target="_blank" rel="noopener" class="proj-link">tech2grassroots.africa<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+        <div class="shot">
+          <img src="tech2grass.png" alt="Tech2Grassroots Africa screenshot" style="height: 100%; width: 100%;">
+        </div>
+      </div>
 
-</div>
-</article>
-<article class="group relative">
-<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
-<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="img" src="Screenshot 2026-04-17 084709.png" loading="lazy"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
-</div>
-<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
-<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">REACT</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TAILWIND CSS</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TYPESCRIPT</span>
-</div>
-<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">DISN's Waitlist</h2>
-<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">Digital innovation school nigeria's waitlist to collect early users infomation so as to send them invite at full launch</p>
-<div class="flex items-center gap-2 md:gap-4">
-<a href="https://disn-waitlist.vercel.app" target="_blank" class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
-<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
-</div>
-</div>
-</div>
-</article>
-<article class="group relative">
-<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
-<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="img" src="Screenshot 2025-11-19 104929.png" loading="lazy"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
-</div>
-<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
-<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">HTML</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">CSS</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">JAVASCRIPT</span>
-</div>
-<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">DecentraShop</h2>
-<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">A decentralized e-commerce platform leveraging blockchain technology for secure transactions. Features dynamic product discovery, smart contracts for trustless commerce, and intuitive wallet integration.</p>
-<div class="flex items-center gap-2 md:gap-4">
-<a href="https://decentra-shop-psi.vercel.app/" class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
-<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
-</div>
-</div>
-</div>
-</article>
-<article class="group relative">
-<div class="glass-card rounded-xl overflow-hidden glow-hover transition-all duration-500 transform hover:scale-[1.01]">
-<div class="aspect-square md:aspect-[16/9] w-full relative overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="" src="screenshot-1759870420736.png" loading="lazy"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
-</div>
-<div class="p-4 md:p-8 absolute bottom-0 left-0 w-full">
-<div class="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">HTML</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">TAILWIND CSS</span>
-<span class="px-2 py-1 rounded-full bg-black/60 border border-white/30 text-white text-[8px] md:text-[10px] font-bold tracking-widest uppercase backdrop-blur-md">JAVASCRIPT</span>
+      <div class="proj">
+        <div class="proj-body">
+          <span class="proj-index mono">03 / innovation lab site</span>
+          <h3>Kwara Innovation Hub</h3>
+          <p class="proj-desc">Innovation lab site under Tech2Grassroots Africa.</p>
+          <div class="stack-row">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Formspree</span>
+          </div>
+          <a href="https://kwarainnovationhub.tech2grassroots.africa" target="_blank" rel="noopener" class="proj-link">kwarainnovationhub.tech2grassroots.africa<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+        <div class="shot">
+          <img src="kwara.png" alt="Kwara Innovation Hub screenshot" style="height: 100%; width: 100%;">
+        </div>
+      </div>
 
-</div>
-<h2 class="font-headline text-lg md:text-4xl font-bold text-on-surface mb-1 md:mb-2 tracking-tighter">CALMSPACE</h2>
-<p class="text-on-surface-variant text-xs md:text-sm mb-4 md:mb-6 max-w-sm">Calmspace is a serene and responsive web app i built to promote mindfulness and relaxation. It features guided meditation sessions & 24/7 chat support.</p>
-<div class="flex items-center gap-2 md:gap-4">
-<a href="https://calm-space-mu.vercel.app/" class="bg-primary hover:bg-primary-dim text-on-primary-container px-3 md:px-6 py-2 md:py-3 rounded-full text-[10px] md:text-xs font-black tracking-widest transition-all">VIEW CASE</a>
-<span class="material-symbols-outlined text-sm md:text-base text-on-surface-variant" data-icon="arrow_outward">arrow_outward</span>
-</div>
-</div>
-</div>
-</article>
-</div>
-</section>
-<section id="about" class="space-y-8">
-<div class="relative w-32 h-32 mx-auto">
-<div class="absolute inset-0 rounded-full indigo-gradient blur-2xl opacity-20 animate-pulse"></div>
-<div class="relative w-full h-full rounded-full border-2 border-indigo-400/30 p-1">
-<img alt="Architect Identity" class="w-full h-full object-cover rounded-full" data-alt="Cinematic portrait of a male digital architect in low key dramatic lighting with blue neon accents reflecting on face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRgCtb5BEeSY6oNsgH2U535PxbLYk1XW2LMx891ZLT1rUgEEbJCvf9E1ILatAGW0BR2ff73p-62ifGnswftJHw5SDP8af7pZcQIP4TjzylFx12Qukjrawvw03VMoGom_xfq7gjaB44n4wR1QhABHIIzZdqsT5W5FMpNG_CM5q9bBqIuEvrHBFdZtU8L6VEgOWGXtgPf50qMVlMA0kkiYQIk2b3_-tgfOmDa6b4dY4vFtj7pcMJeS32ecw3dQyy8aH4RZJ85898HoZ"/>
-</div>
-</div>
-<div class="text-center space-y-4">
-<h1 class="text-4xl font-headline font-bold tracking-tighter leading-none text-glow">
-                    CRAFTING THE <br/> <span class="text-indigo-400">VOID.</span>
-</h1>
-<p class="text-on-surface-variant text-sm leading-relaxed max-w-[280px] mx-auto font-light">
-                    Interdisciplinary developer focused on building ultra-precise digital experiences.
-                </p>
-</div>
-</section>
-<section id="skills" class="space-y-12 py-16">
-<div class="flex flex-col items-center">
-<span class="text-[10px] tracking-[0.4em] text-secondary font-black uppercase mb-4 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 inline-block">Tech Stack</span>
-<div class="h-px w-16 bg-gradient-to-r from-transparent via-secondary to-transparent mt-4"></div>
-</div>
-<div class="relative grid grid-cols-2 md:grid-cols-4 gap-4">
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-primary/40 hover:border-primary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="polymer">polymer</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">HTML</h3>
-<p class="text-[10px] text-on-surface-variant font-label">Fluid Markup</p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-secondary" data-icon="palette">palette</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">CSS & Tailwind</h3>
-<p class="text-[10px] text-on-surface-variant font-label">Styling Architecture</p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-tertiary/40 hover:border-tertiary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-tertiary" data-icon="code">code</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">Javascript</h3>
-<p class="text-[10px] text-on-surface-variant font-label">Interactive Logic</p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-secondary" data-icon="component_exchange">component_exchange</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">React</h3>
-<p class="text-[10px] text-on-surface-variant font-label">UI Components</p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-tertiary/40 hover:border-tertiary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-tertiary" data-icon="description">description</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">PHP</h3>
-<p class="text-[10px] text-on-surface-variant font-label">Backend Logic</p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-primary/40 hover:border-primary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud_sync">cloud_sync</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">Node.js</h3>
-<p class="text-[10px] text-on-surface-variant font-label">Runtime Engine</p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-r-2 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-secondary" data-icon="settings_ethernet">settings_ethernet</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">Express</h3>
-<p class="text-[10px] text-on-surface-variant font-label">API Framework</p>
-</div>
-<div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center space-y-3 text-center border-l-2 border-tertiary/40 hover:border-tertiary/80 transition-all hover:scale-105">
-<span class="material-symbols-outlined text-4xl text-tertiary" data-icon="database">database</span>
-<h3 class="font-headline text-xs font-bold tracking-widest uppercase">MongoDB</h3>
-<p class="text-[10px] text-on-surface-variant font-label">Data Persistence</p>
-</div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-indigo-500/10 blur-xl"></div>
-</div>
-</section>
-<section id="experience" class="space-y-12">
-<div class="flex flex-col items-start px-2">
-<span class="text-[10px] tracking-[0.4em] text-indigo-400 font-black uppercase mb-2">Experience Log</span>
-<h2 class="text-2xl font-headline font-bold">THE JOURNEY</h2>
-</div>
-<div class="relative px-2 space-y-16">
-<div class="absolute left-[13px] top-2 bottom-0 w-[1px] bg-gradient-to-b from-indigo-400 via-secondary/40 to-transparent"></div>
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-background border border-indigo-400 flex items-center justify-center shadow-[0_0_15px_rgba(163,166,255,0.4)] z-10">
-<div class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></div>
-</div>
-<div class="space-y-2">
-<span class="text-[10px] font-label text-indigo-400 tracking-tighter">2026 — PRESENT</span>
-<h4 class="font-headline text-lg font-bold leading-tight">Intern Frontend Developer</h4>
-<p class="text-xs text-on-surface-variant leading-relaxed font-light">Frontend web developer at KWARATECH ACADEMY.</p>
-</div>
-</div>
-<div class="relative pl-12 opacity-80">
-<div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-background border border-outline-variant flex items-center justify-center z-10">
-<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-</div>
-<div class="space-y-2">
-<span class="text-[10px] font-label text-outline-variant tracking-tighter">2025 — 2026</span>
-<h4 class="font-headline text-lg font-bold leading-tight">Personal Projects & Skill Development</h4>
-<p class="text-xs text-on-surface-variant leading-relaxed font-light">Practiced UI/UX design and deployment workflows, actively learning frontend & backend development</p>
-</div>
-</div>
-<div class="relative pl-12 opacity-60">
-<div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-background border border-outline-variant flex items-center justify-center z-10">
-<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
-</div>
-<div class="space-y-2 mb-4">
-<span class="text-[10px] font-label text-outline-variant tracking-tighter">2024 — 2025</span>
-<h4 class="font-headline text-lg font-bold leading-tight">Web Development Learning Phase</h4>
-<p class="text-xs text-on-surface-variant leading-relaxed font-light">Completed online courses in HTML,CSS,JAVASCRIPT</p>
+      <div class="proj">
+        <div class="proj-body">
+          <span class="proj-index mono">04 / ai career explorer</span>
+          <h3>KIL Career Discovery Platform</h3>
+          <p class="proj-desc">AI-powered career pathway explorer built on the Gemini API, letting students explore tech careers through a conversational interface.</p>
+          <div class="stack-row">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Gemini API</span>
+          </div>
+          <a href="https://kwarainnovationlabcareerdiscovery.vercel.app" target="_blank" rel="noopener" class="proj-link">kwarainnovationlabcareerdiscovery.vercel.app<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+        <div class="shot">
+          <img src="image.png" alt="KIL Career Discovery Platform screenshot" style="height: 100%; width: 100%;">
+        </div>
+      </div>
 
-<p class="text-xs text-on-surface-variant leading-relaxed font-light">Built mini projects (portfolio site, landing pages)</p>
-</div>
-</div>
-</div>
-</section>
-<section id="contact" class="glass-card p-8 rounded-3xl text-center space-y-6">
-<h3 class="text-xl font-headline font-bold">GOT AN IDEA, PROJECT, OR BUSINESS THAT NEEDS A <br/> <span class="text-indigo-400">WEBSITE?</span></h3>
-<p class="text-xs text-on-surface-variant font-light leading-relaxed">I can help you turn it into something real. <strong>Reach out let's build something great</strong></p>
-<div class="mt-5">
-<a href="https://wa.me/2348152681122?text=Hi%20I%20saw%20your%20portfolio%20and%20I%20want%20a%20website" class="w-full py-3 indigo-gradient rounded-full text-[10px] font-bold tracking-[0.3em] uppercase shadow-[0_10px_30px_rgba(163,166,255,0.3)] hover:scale-95 transition-transform duration-300 ">
-                INITIATE CONTACT
+      <div class="proj">
+        <div class="proj-body">
+          <span class="proj-index mono">05 / saas landing page</span>
+          <h3>CalmSpace</h3>
+          <p class="proj-desc">A serene, responsive SaaS landing page promoting mindfulness and relaxation, with an animated hero and CTA.</p>
+          <div class="stack-row">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          </div>
+          <a href="https://calm-space-mu.vercel.app" target="_blank" rel="noopener" class="proj-link">calm-space-mu.vercel.app<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+        <div class="shot">
+          <img src="screenshot-1759870420736.png" alt="CalmSpace screenshot" style="height: 100%; width: 100%;">
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-body">
+          <span class="proj-index mono">06 / web3 storefront</span>
+          <h3>DecentraShop</h3>
+          <p class="proj-desc">A decentralised e-commerce storefront UI leveraging blockchain technology for secure transactions.</p>
+          <div class="stack-row">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          </div>
+          <a href="https://decentra-shop-psi.vercel.app" target="_blank" rel="noopener" class="proj-link">decentra-shop-psi.vercel.app<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+        <div class="shot">
+          <img src="Screenshot 2025-11-19 104929.png" alt="DecentraShop screenshot" style="height: 100%; width: 100%;">
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-body">
+          <span class="proj-index mono">07 / service marketplace</span>
+          <h3>workaservices.com</h3>
+          <p class="proj-desc">A service-marketplace platform connecting service providers and customers to meet and book services.</p>
+          <div class="stack-row">
+            <span class="chip">Express</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">REST API</span>
+          </div>
+          <a href="https://workaservices.com" target="_blank" rel="noopener" class="proj-link">workaservices.com<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+        <div class="shot">
+          
+          <img src="worka.png" alt="Worka Services screenshot" style="height: 100%; width: 100%;">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag mono">stack</div>
+        <div>
+          <h2>Tools of the trade</h2>
+          <p class="sub">What I reach for, end to end.</p>
+        </div>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-cat">
+          <div class="head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4L2 12l6 8M16 4l6 8-6 8"/></svg>
+            <h4>Languages</h4>
+          </div>
+          <div class="items">HTML5, CSS3, JavaScript (ES6+), TypeScript</div>
+        </div>
+        <div class="skill-cat">
+          <div class="head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+            <h4>Frontend</h4>
+          </div>
+          <div class="items">React, Next.js, Tailwind CSS, Bootstrap, responsive &amp; mobile-first design, web accessibility, performance optimisation</div>
+        </div>
+        <div class="skill-cat">
+          <div class="head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="7" rx="1"/><rect x="3" y="14" width="18" height="7" rx="1"/><circle cx="7" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="7" cy="17.5" r=".6" fill="currentColor" stroke="none"/></svg>
+            <h4>Backend</h4>
+          </div>
+          <div class="items">Node.js, Express, PHP, MySQL, Prisma ORM, PostgreSQL, Supabase (Auth &amp; DB), REST API design</div>
+        </div>
+        <div class="skill-cat">
+          <div class="head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1.04 1.56V21a2 2 0 11-4 0v-.09A1.7 1.7 0 008.4 19.4a1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.7 1.7 0 004 15a1.7 1.7 0 00-1.56-1.04H2.5a2 2 0 010-4H2.6A1.7 1.7 0 004.6 8.66a1.7 1.7 0 00-.34-1.87l-.06-.06A2 2 0 117.03 3.9l.06.06A1.7 1.7 0 008.96 4.3a1.7 1.7 0 001.04-1.56V2.6a2 2 0 014 0v.09c.02.68.42 1.29 1.04 1.56.62.27 1.35.16 1.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06A1.7 1.7 0 0019.4 8.6c.27.62.88 1.02 1.56 1.04h.09a2 2 0 010 4h-.09a1.7 1.7 0 00-1.56 1.36z"/></svg>
+            <h4>APIs &amp; Integrations</h4>
+          </div>
+          <div class="items">Google Gemini API, Formspree, Fetch/Async-Await, role-based access control (JWT)</div>
+        </div>
+        <div class="skill-cat" style="grid-column:1/-1;">
+          <div class="head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+            <h4>Tools &amp; Workflow</h4>
+          </div>
+          <div class="items">Git, GitHub, Vercel, Render, VS Code, Thunder Client</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <h4 class="mono">education &amp; certifications</h4>
+          <div class="edu-item">
+            <div class="t">B.Sc. Computer Science — Third Year</div>
+            <div class="s">University of Ilorin · 2022 — Present · Ilorin, Nigeria</div>
+          </div>
+          <div class="edu-item">
+            <div class="t">Responsive Web Design Certification</div>
+            <div class="s">freeCodeCamp · 2025 · Online</div>
+          </div>
+        </div>
+        <div>
+          <h4 class="mono">core strengths</h4>
+          <ul class="strength-list">
+            <li>Strong problem-solving mindset</li>
+            <li>Fast learner in evolving tech environments</li>
+            <li>Eye for UI/UX detail</li>
+            <li>Comfortable at start-up pace</li>
+            <li>Clear communication with non-technical stakeholders</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-inner">
+        <div>
+          <div class="tag mono" style="margin-bottom:16px;">contact</div>
+          <h2>Have a project, or a role in mind? Let's talk.</h2>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:bamideleayoola09@gmail.com">
+              <span class="ch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>bamideleayoola09@gmail.com</span>
+              <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
             </a>
-</div>
-</section>
-<div class="mt-22 mb-10">
-<div class="flex items-center gap-4 mb-10">
-<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
-<span class="font-label text-[10px] tracking-[0.2em] text-outline uppercase">Network Links</span>
-<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
-</div>
-<div class="grid grid-cols-4 gap-4">
-<a class="flex flex-col items-center gap-2 group" href="mailto:bamideleayoola09@gmail.com">
-<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-primary group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
-<span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">mail</span>
-</div>
-<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-primary transition-colors">MAIL</span>
-</a>
-<a class="flex flex-col items-center gap-2 group" href="#">
-<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-secondary group-hover:border-secondary/50 group-hover:bg-secondary/5 transition-all duration-300">
-<span class="material-symbols-outlined">podcasts</span>
-</div>
-<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-secondary transition-colors">LINKEDIN</span>
-</a>
-<a class="flex flex-col items-center gap-2 group" href="https://github.com/Ayoola05617">
-<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-tertiary group-hover:border-tertiary/50 group-hover:bg-tertiary/5 transition-all duration-300">
-<svg class="w-6 h-6 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.768.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-</svg>
-</div>
-<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-tertiary transition-colors">GITHUB</span>
-</a>
-<a class="flex flex-col items-center gap-2 group" href="https://twitter.com/Ayoolathedev">
-<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container border border-white/5 text-slate-400 group-hover:text-error group-hover:border-error/50 group-hover:bg-error/5 transition-all duration-300">
-<svg class="w-6 h-6 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.89 6.75h-3.31l7.73-8.835L.456 2.25h6.598l4.682 6.18 5.373-6.18zM17.15 18.75h1.828L5.293 4.12H3.31L17.15 18.75z"/>
-</svg>
-</div>
-<span class="text-[8px] font-label tracking-widest text-outline group-hover:text-error transition-colors">X</span>
-</a>
-</div>
-</div>
+          </li>
+          <li>
+            <a href="https://wa.me/2347030764281?text=Hi%20Bamidele%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20about%20a%20project" target="_blank" rel="noopener">
+              <span class="ch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>07030 764 281 (WhatsApp)</span>
+              <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Ayoola05617" target="_blank" rel="noopener">
+              <span class="ch"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.768.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>github.com/Ayoola05617</span>
+              <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Ayoolathedev" target="_blank" rel="noopener">
+              <span class="ch"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.165-6.75-5.89 6.75h-3.31l7.73-8.835L.456 2.25h6.598l4.682 6.18 5.373-6.18zM17.15 18.75h1.828L5.293 4.12H3.31L17.15 18.75z"/></svg>@Ayoolathedev</span>
+              <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer class="w-full py-16 px-8 border-t border-white/5 bg-black">
-<div class="flex flex-col md:flex-row justify-between items-center gap-12 w-full max-w-[1440px] mx-auto">
-<div class="flex flex-col items-center md:items-start gap-4">
-<span class="text-lg font-black text-slate-50 font-headline tracking-[0.2em] uppercase">AYOOLATHEDEV</span>
-<p class="text-slate-500 font-inter text-[10px] tracking-[0.2em] uppercase text-center md:text-left">© 2026 Ayoolathedev. DEVELOPED FOR PRECISION.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#projects">PROJECTS</a>
-<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#skills">SKILLS</a>
-<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#experience">EXPERIENCE</a>
-<a class="text-slate-500 hover:text-indigo-300 transition-opacity font-inter text-xs tracking-[0.2em] uppercase" href="#">CONTACT</a>
-</div>
-</div>
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; width:100%;">
+    <span>© 2026 Bamidele Joseph</span>
+    <span>Ilorin, Kwara State, Nigeria</span>
+    <span>Built with intent, not templates.</span>
+  </div>
 </footer>
-<div class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-slate-950/80 backdrop-blur-2xl flex items-center justify-around px-6 border-t border-white/5 z-50">
-<a href="#projects" class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-lg">grid_view</span>
-<span class="text-[8px] tracking-widest">WORK</span>
-</a>
-<a href="#skills" class="flex flex-col items-center gap-1 text-slate-500 hover:text-secondary transition-colors">
-<span class="material-symbols-outlined text-lg">code</span>
-<span class="text-[8px] tracking-widest">SKILLS</span>
-</a>
-<a href="#experience" class="flex flex-col items-center gap-1 text-slate-500 hover:text-tertiary transition-colors">
-<span class="material-symbols-outlined text-lg">timeline</span>
-<span class="text-[8px] tracking-widest">EXP</span>
-</a>
-<a href="#contact" class="flex flex-col items-center gap-1 text-slate-500 hover:text-error transition-colors">
-<span class="material-symbols-outlined text-lg">mail</span>
-<span class="text-[8px] tracking-widest">CONTACT</span>
-</a>
-</div>
-<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10">
-<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]"></div>
-<div class="absolute bottom-[20%] right-[-5%] w-[30%] h-[30%] rounded-full bg-secondary/5 blur-[100px]"></div>
 
-<div class="fixed -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
-<div class="fixed -top-24 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
-</div>
-<script src="https://www.dev.owlassist.app/widget/owl-assist.js" data-business="user_3DuO3lmbb0TecC9ErFEHPmcwIt2" defer></script>
 <script>
-    // Cursor Glow Effect
-    const cursorGlow = document.createElement('div');
-    cursorGlow.className = 'cursor-glow';
-    document.body.appendChild(cursorGlow);
+  // header background on scroll
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-    document.addEventListener('mousemove', (e) => {
-        cursorGlow.style.left = (e.clientX - 15) + 'px';
-        cursorGlow.style.top = (e.clientY - 15) + 'px';
-    });
-
-    // Hide cursor glow when mouse leaves window
-    document.addEventListener('mouseleave', () => {
-        cursorGlow.style.display = 'none';
-    });
-
-    document.addEventListener('mouseenter', () => {
-        cursorGlow.style.display = 'block';
-    });
-
-    // Scroll Reveal Animation
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-scroll');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Apply scroll reveal to sections
-    document.querySelectorAll('section').forEach((section) => {
-        section.classList.add('fade-in-scroll');
-        observer.observe(section);
-    });
-
-    // Apply floating animation to project cards
-    document.querySelectorAll('article').forEach((article, index) => {
-        article.classList.add('float-animation');
-        article.style.animationDelay = (index * 0.5) + 's';
-    });
-
-    // Add shine effect to buttons
-    document.querySelectorAll('.indigo-gradient, .bg-primary').forEach((btn) => {
-        if (btn.tagName === 'A' || btn.tagName === 'BUTTON') {
-            btn.classList.add('btn-shine');
-        }
-    });
-
-    // Text reveal for hero headline
-    const heroHeadline = document.querySelector('h1');
-    if (heroHeadline) {
-        const text = heroHeadline.innerHTML;
-        heroHeadline.innerHTML = text.split('<br/>').map((span) => 
-            `<span class="reveal-text inline-block">${span}</span>`
-        ).join('<br/>');
-    }
-
-    // Staggered reveal for skill cards
-    document.querySelectorAll('.glass-card').forEach((card, index) => {
-        card.style.animation = 'fadeInUp 0.8s ease-out forwards';
-        card.style.animationDelay = (index * 0.1) + 's';
-    });
+  // mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobilePanel = document.getElementById('mobilePanel');
+  const closeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  const openIcon = menuBtn.innerHTML;
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuBtn.innerHTML = isOpen ? closeIcon : openIcon;
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobilePanel.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', false);
+    menuBtn.innerHTML = openIcon;
+  }));
 </script>
-</body></html>
+</body>
+</html>
